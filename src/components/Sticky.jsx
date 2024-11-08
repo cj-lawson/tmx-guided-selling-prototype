@@ -13,7 +13,7 @@ const Sticky = ({
 
   return (
     <>
-      <footer className="sticky bottom-0 pb-10 pt-2 border-t border-slate-200 z-100 bg-white">
+      <footer className="sticky bottom-0 pb-10 pt-2 border-t border-slate-200 z-100 bg-white shadow-t-md">
         {/* Only render dropdown button if there are selected options */}
         {selectedOptions.length > 0 && (
           <div className="relative">
@@ -39,7 +39,7 @@ const Sticky = ({
             </button>
 
             {isDropdownOpen && (
-              <div className="absolute w-full bg-white shadow-t-lg border-t border-slate-200 bottom-full px-5 max-h-48 overflow-y-auto z-10 animate-slide-in">
+              <div className="absolute w-full bg-white border-t border-slate-200 bottom-full px-5 max-h-48 overflow-y-auto z-150 animate-slide-in shadow-t-md">
                 <ul className="p-4">
                   {formOptions
                     .filter((option) => selectedOptions.includes(option.option))
