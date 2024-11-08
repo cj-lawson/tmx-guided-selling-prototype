@@ -4,6 +4,22 @@ import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Sticky from "./Sticky";
 
+// Lifted state
+const formOptions = [
+  { id: 1, option: 1, title: "Ants", image: "/ants.svg" },
+  { id: 2, option: 2, title: "Beetles", image: "/ants.svg" },
+  { id: 3, option: 3, title: "Bees", image: "/ants.svg" },
+  { id: 4, option: 4, title: "Ticks", image: "/ants.svg" },
+  { id: 5, option: 5, title: "Spiders", image: "/ants.svg" },
+  { id: 6, option: 6, title: "Rodents", image: "/ants.svg" },
+  { id: 7, option: 7, title: "Cockroaches", image: "/ants.svg" },
+  { id: 8, option: 8, title: "Flies", image: "/ants.svg" },
+  { id: 9, option: 9, title: "Fleas", image: "/ants.svg" },
+  { id: 10, option: 10, title: "Mosquitoes", image: "/ants.svg" },
+  { id: 11, option: 11, title: "Moths", image: "/ants.svg" },
+  { id: 12, option: 12, title: "Wasps", image: "/ants.svg" },
+];
+
 const multiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -11,9 +27,18 @@ const multiStepForm = () => {
     email: "",
   });
 
+  //  Lifted state
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
   const steps = [
     <Step1 formData={formData} setFormData={setFormData} />,
-    <Step2 formData={formData} setFormData={setFormData} />,
+    <Step2
+      formData={formData}
+      setFormData={setFormData}
+      selectedOptions={selectedOptions}
+      setSelectedOptions={setSelectedOptions}
+      formOptions={formOptions}
+    />,
     <Step3 formData={formData} setFormData={setFormData} />,
   ];
 
@@ -58,6 +83,8 @@ const multiStepForm = () => {
         steps={steps}
         handleNext={handleNext}
         handleSubmit={handleSubmit}
+        selectedOptions={selectedOptions}
+        formOptions={formOptions}
       />
     </>
   );
