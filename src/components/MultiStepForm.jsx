@@ -7,17 +7,21 @@ import Sticky from "./Sticky";
 // Lifted state
 const formOptions = [
   { id: 1, option: 1, title: "Ants", image: "/ants.svg" },
-  { id: 2, option: 2, title: "Beetles", image: "/ants.svg" },
-  { id: 3, option: 3, title: "Bees", image: "/ants.svg" },
-  { id: 4, option: 4, title: "Ticks", image: "/ants.svg" },
-  { id: 5, option: 5, title: "Spiders", image: "/ants.svg" },
-  { id: 6, option: 6, title: "Rodents", image: "/ants.svg" },
-  { id: 7, option: 7, title: "Cockroaches", image: "/ants.svg" },
-  { id: 8, option: 8, title: "Flies", image: "/ants.svg" },
-  { id: 9, option: 9, title: "Fleas", image: "/ants.svg" },
-  { id: 10, option: 10, title: "Mosquitoes", image: "/ants.svg" },
-  { id: 11, option: 11, title: "Moths", image: "/ants.svg" },
-  { id: 12, option: 12, title: "Wasps", image: "/ants.svg" },
+  { id: 2, option: 2, title: "Beetles", image: "/other.svg" },
+  { id: 3, option: 3, title: "Bees", image: "/bee.svg" },
+  { id: 4, option: 4, title: "Ticks", image: "/tick.svg" },
+  { id: 5, option: 5, title: "Spiders", image: "/spider.svg" },
+  { id: 6, option: 6, title: "Rodents", image: "/rodent.svg" },
+  { id: 7, option: 7, title: "Cockroaches", image: "/other.svg" },
+  { id: 8, option: 8, title: "Flies", image: "/bee.svg" },
+  { id: 9, option: 9, title: "Fleas", image: "/tick.svg" },
+  { id: 10, option: 10, title: "Mosquitoes", image: "/bee.svg" },
+  { id: 11, option: 11, title: "Moths", image: "/bee.svg" },
+  { id: 12, option: 12, title: "Wasps", image: "/bee.svg" },
+  { id: 13, option: 13, title: "House Ants", image: "/ants.svg" },
+  { id: 14, option: 14, title: "Carpenter Ants", image: "/ants.svg" },
+  { id: 15, option: 15, title: "Fire Ants", image: "/ants.svg" },
+  { id: 16, option: 16, title: "Crazy Ants", image: "/ants.svg" },
 ];
 
 const multiStepForm = () => {
