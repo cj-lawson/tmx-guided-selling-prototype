@@ -4,24 +4,31 @@ import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Sticky from "./Sticky";
 
+import ant from "/ants.svg";
+import other from "/other.svg";
+import bee from "/bee.svg";
+import tick from "/tick.svg";
+import spider from "/spider.svg";
+import rodent from "/rodent.svg";
+
 // Lifted state
 const formOptions = [
-  { id: 1, option: 1, title: "Ants", image: "/ants.svg" },
-  { id: 2, option: 2, title: "Beetles", image: "/other.svg" },
-  { id: 3, option: 3, title: "Bees", image: "/bee.svg" },
-  { id: 4, option: 4, title: "Ticks", image: "/tick.svg" },
-  { id: 5, option: 5, title: "Spiders", image: "/spider.svg" },
-  { id: 6, option: 6, title: "Rodents", image: "/rodent.svg" },
-  { id: 7, option: 7, title: "Cockroaches", image: "/other.svg" },
-  { id: 8, option: 8, title: "Flies", image: "/bee.svg" },
-  { id: 9, option: 9, title: "Fleas", image: "/tick.svg" },
-  { id: 10, option: 10, title: "Mosquitoes", image: "/bee.svg" },
-  { id: 11, option: 11, title: "Moths", image: "/bee.svg" },
-  { id: 12, option: 12, title: "Wasps", image: "/bee.svg" },
-  { id: 13, option: 13, title: "House Ants", image: "/ants.svg" },
-  { id: 14, option: 14, title: "Carpenter Ants", image: "/ants.svg" },
-  { id: 15, option: 15, title: "Fire Ants", image: "/ants.svg" },
-  { id: 16, option: 16, title: "Crazy Ants", image: "/ants.svg" },
+  { id: 1, option: 1, title: "Ants", image: ant },
+  { id: 2, option: 2, title: "Beetles", image: other },
+  { id: 3, option: 3, title: "Bees", image: bee },
+  { id: 4, option: 4, title: "Ticks", image: spider },
+  { id: 5, option: 5, title: "Spiders", image: spider },
+  { id: 6, option: 6, title: "Rodents", image: rodent },
+  { id: 7, option: 7, title: "Cockroaches", image: other },
+  { id: 8, option: 8, title: "Flies", image: bee },
+  { id: 9, option: 9, title: "Fleas", image: tick },
+  { id: 10, option: 10, title: "Mosquitoes", image: bee },
+  { id: 11, option: 11, title: "Moths", image: bee },
+  { id: 12, option: 12, title: "Wasps", image: bee },
+  { id: 13, option: 13, title: "House Ants", image: ant },
+  { id: 14, option: 14, title: "Carpenter Ants", image: ant },
+  { id: 15, option: 15, title: "Fire Ants", image: ant },
+  { id: 16, option: 16, title: "Crazy Ants", image: ant },
 ];
 
 const multiStepForm = () => {
