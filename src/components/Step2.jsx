@@ -69,7 +69,9 @@ const Step2 = ({
                   />
                   <span className="flex flex-1 justify-center items-center">
                     <span className="flex flex-col items-center">
-                      <img src={formOption.image} alt="" />
+                      <div className="bg-slate-100 rounded-full w-12 h-12 flex items-center justify-center">
+                        <img src={formOption.image} alt="" className="h-6" />
+                      </div>
                       <span className="block text-md font-medium text-gray-900">
                         {formOption.title}
                       </span>
