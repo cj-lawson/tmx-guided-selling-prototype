@@ -6,25 +6,14 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
 
-const formOptions = [
-  { id: 1, option: 1, title: "Ants", image: "/ants.svg" },
-  { id: 2, option: 2, title: "Beetles", image: "/ants.svg" },
-  { id: 3, option: 3, title: "Bees", image: "/ants.svg" },
-  { id: 4, option: 4, title: "Ticks", image: "/ants.svg" },
-  { id: 5, option: 5, title: "Spiders", image: "/ants.svg" },
-  { id: 6, option: 6, title: "Rodents", image: "/ants.svg" },
-  { id: 7, option: 7, title: "Cockroaches", image: "/ants.svg" },
-  { id: 8, option: 8, title: "Flies", image: "/ants.svg" },
-  { id: 9, option: 9, title: "Fleas", image: "/ants.svg" },
-  { id: 10, option: 10, title: "Mosquitoes", image: "/ants.svg" },
-  { id: 11, option: 11, title: "Moths", image: "/ants.svg" },
-  { id: 12, option: 12, title: "Wasps", image: "/ants.svg" },
-];
-
-const Step2 = ({ formData, setFormData }) => {
-  const [selectedOptions, setSelectedOptions] = useState([]);
+const Step2 = ({
+  formData,
+  setFormData,
+  selectedOptions,
+  setSelectedOptions,
+  formOptions,
+}) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleCheckboxChange = (option) => {
     setSelectedOptions((prevSelectedOptions) => {
@@ -105,39 +94,6 @@ const Step2 = ({ formData, setFormData }) => {
             })}
           </div>
         </fieldset>
-
-        {/* Dropdown with selected options count */}
-        <div className="mt-6 relative">
-          <button
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="w-full flex justify-between items-center py-3 px-4 bg-white border border-slate-200 shadow-sm rounded-md focus:outline-none"
-          >
-            <span className="text-md font-medium">
-              ({selectedOptions.length}) pests selected
-            </span>
-            <ChevronDownIcon
-              className={`h-5 w-5 text-gray-500 transition-transform ${
-                isDropdownOpen ? "-rotate-180" : "rotate-0"
-              }`}
-            />
-          </button>
-          {isDropdownOpen && (
-            <div className="absolute w-full bg-white border border-slate-200 shadow-lg rounded-md mt-2 max-h-48 overflow-y-auto z-10">
-              <ul className="p-4">
-                {formOptions
-                  .filter((option) => selectedOptions.includes(option.option))
-                  .map((option) => (
-                    <li key={option.id} className="flex items-center space-x-2">
-                      <img src={option.image} alt="" className="h-6 w-6" />
-                      <span className="text-md font-medium text-gray-900">
-                        {option.title}
-                      </span>
-                    </li>
-                  ))}
-              </ul>
-            </div>
-          )}
-        </div>
       </div>
     </>
   );
