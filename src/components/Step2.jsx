@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Checkbox } from "@headlessui/react";
 import {
   CheckCircleIcon,
-  ChevronDownIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
 

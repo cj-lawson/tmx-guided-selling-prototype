@@ -8,6 +8,7 @@ const Sticky = ({
   handleSubmit,
   selectedOptions,
   formOptions,
+  removeOption, // Receive removeOptions function as prop
 }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -45,7 +46,10 @@ const Sticky = ({
                     .filter((option) => selectedOptions.includes(option.option))
                     .map((option) => (
                       <li key={option.id} className="flex pb-8">
-                        <div className="flex items-center justify-between w-full">
+                        <button
+                          className="flex items-center justify-between w-full"
+                          onClick={() => removeOption(option.option)}
+                        >
                           <div className="flex">
                             <img
                               src={option.image}
@@ -61,7 +65,7 @@ const Sticky = ({
                             aria-hidden="true"
                             className="h-5 w-5 text-tmx-green"
                           />
-                        </div>
+                        </button>
                       </li>
                     ))}
                 </ul>

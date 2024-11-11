@@ -53,6 +53,13 @@ const multiStepForm = () => {
     <Step3 formData={formData} setFormData={setFormData} />,
   ];
 
+  // Remove function
+  const removeOption = (option) => {
+    setSelectedOptions((prevSelectedOptions) =>
+      prevSelectedOptions.filter((item) => item !== option)
+    );
+  };
+
   const handleNext = () => {
     setCurrentStep((prevStep) => prevStep + 1);
   };
@@ -96,6 +103,7 @@ const multiStepForm = () => {
         handleSubmit={handleSubmit}
         selectedOptions={selectedOptions}
         formOptions={formOptions}
+        removeOption={removeOption} //Pass remove option
       />
     </>
   );
