@@ -3,7 +3,7 @@ import MultiStepForm from "./components/MultiStepForm";
 
 function App() {
   return (
-    <div className="flex flex-col h-screen bg-[#FBFBFB]">
+    <div className="flex flex-col h-screen bg-[#F7F7F7]">
       <Navbar />
       <MultiStepForm />
     </div>

@@ -76,7 +76,7 @@ const Sticky = ({
               {/* Next button */}
               <button
                 onClick={handleNext}
-                className="bg-[#facc15] px-2 py-4 w-full mt-4 rounded-full font-semibold"
+                className="bg-[#122A30] text-white px-2 py-4 w-full mt-4 rounded-full font-semibold"
               >
                 NEXT
               </button>

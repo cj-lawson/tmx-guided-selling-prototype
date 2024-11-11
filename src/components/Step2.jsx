@@ -47,7 +47,7 @@ const Step2 = ({
               placeholder="Search for any pest"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-[#e0e0e0] rounded-md focus:outline-none focus:ring-2 focus:ring-tmx-green"
+              className="w-full pl-10 pr-4 py-3 border border-[#e0e0e0] rounded-full focus:outline-none focus:ring-2 focus:ring-tmx-green"
             />
           </div>
 
@@ -69,8 +69,8 @@ const Step2 = ({
                   />
                   <span className="flex flex-1 justify-center items-center">
                     <span className="flex flex-col items-center">
-                      <div className="bg-slate-100 rounded-full w-12 h-12 flex items-center justify-center">
-                        <img src={formOption.image} alt="" className="h-6" />
+                      <div className=" rounded-full w-12 h-12 flex items-center justify-center">
+                        <img src={formOption.image} alt="" className="h-12" />
                       </div>
                       <span className="block text-md font-medium text-gray-900">
                         {formOption.title}
@@ -78,11 +78,13 @@ const Step2 = ({
                     </span>
                   </span>
                   <div className="absolute top-2 right-2 h-5 w-5">
-                    {isSelected && (
+                    {isSelected ? (
                       <CheckCircleIcon
                         aria-hidden="true"
                         className="h-5 w-5 text-tmx-green"
                       />
+                    ) : (
+                      <div className="h-5 w-5 border border-[#e0e0e0] rounded-full"></div>
                     )}
                   </div>
                   <span
