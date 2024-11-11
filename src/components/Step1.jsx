@@ -26,7 +26,7 @@ const Step1 = ({ formData, setFormData }) => {
             <Radio
               key={formOption.id}
               value={formOption.option}
-              className="group relative flex cursor-pointer rounded-md border border-slate-200 bg-white py-7 px-4 shadow-sm focus:outline-none data-[focus]:border-tmx-green data-[focus]:ring-2 data-[focus]:ring-indigo-600"
+              className="group relative flex cursor-pointer rounded-md border border-[#e0e0e0] bg-white py-7 px-4 focus:outline-none data-[focus]:border-tmx-green data-[focus]:ring-2 data-[focus]:ring-indigo-600"
             >
               <span className="flex flex-1">
                 <span className="flex flex-col">

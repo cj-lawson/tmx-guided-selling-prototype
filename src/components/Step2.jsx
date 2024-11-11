@@ -47,7 +47,7 @@ const Step2 = ({
               placeholder="Search for any pest"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-slate-200 shadow-xs rounded-md focus:outline-none focus:ring-2 focus:ring-tmx-green"
+              className="w-full pl-10 pr-4 py-3 border border-[#e0e0e0] rounded-md focus:outline-none focus:ring-2 focus:ring-tmx-green"
             />
           </div>
 
@@ -60,8 +60,8 @@ const Step2 = ({
                   key={formOption.id}
                   onClick={() => handleCheckboxChange(formOption.option)}
                   className={`group relative flex cursor-pointer rounded-md border 
-                  ${isSelected ? "border-tmx-green" : "border-slate-200"}
-                  bg-white py-7 px-4 shadow-sm focus:outline-none`}
+                  ${isSelected ? "border-tmx-green" : "border-[#e0e0e0]"}
+                  bg-white py-7 px-4 focus:outline-none`}
                 >
                   <Checkbox
                     checked={isSelected}

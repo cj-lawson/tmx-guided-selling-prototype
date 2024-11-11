@@ -2,7 +2,7 @@ import logo from "/TMX_logo.svg";
 
 const Navbar = () => {
   return (
-    <header className="bg-slate-50 border-b border-slate-200">
+    <header className="bg-white border-b border-[#e0e0e0]">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
